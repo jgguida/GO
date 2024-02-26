@@ -1,13 +1,15 @@
 # Servidor HTTP Básico
 Estrutura do Código
-package main
+
 package main: Define o pacote ao qual este arquivo pertence. Em Go, o pacote main é especial: ele define um executável, não uma biblioteca.
 import (
 	"fmt"
 	"net/http"
 )
 import: Esta seção importa os pacotes necessários para o nosso código.
+
 fmt: Utilizado para operações de entrada/saída formatadas, como imprimir mensagens no console.
+
 net/http: Um pacote poderoso que permite a implementação de clientes e servidores HTTP em Go.
 
 func main() {
@@ -17,7 +19,9 @@ func main() {
 }
 func main(): A função principal do nosso programa. É o ponto de entrada do executável.
 http.HandleFunc("/texto-mockado", textoMockadoHandler): Registra a função textoMockadoHandler como o manipulador para a rota /texto-mockado. Quando essa rota for acessada, a função textoMockadoHandler será chamada.
+
 fmt.Println("Servidor rodando na porta 8080..."): Imprime uma mensagem no console indicando que o servidor está rodando e em qual porta.
+
 http.ListenAndServe(":8080", nil): Inicia um servidor HTTP na porta 8080. O segundo argumento (nil) indica que estamos usando o multiplexador de rotas padrão.
 
 func textoMockadoHandler(w http.ResponseWriter, r *http.Request) {
