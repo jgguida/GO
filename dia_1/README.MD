@@ -1,4 +1,5 @@
 # Servidor HTTP Básico
+
 Estrutura do Código
 
 package main: Define o pacote ao qual este arquivo pertence. Em Go, o pacote main é especial: ele define um executável, não uma biblioteca.
